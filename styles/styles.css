@@ -128,6 +128,18 @@ header {
         margin-bottom: 12px;
     }
 }
+  
+
+  
+.container .text {
+    position: absolute;
+    color: white;
+    left: 10vw;
+    top: 22vh;
+    font-size: 5vw;
+}
+
+
 
 .container {
     width: 100%;
@@ -161,8 +173,8 @@ header {
     position: absolute;
     color: white;
     left: 10vw;
-    top: 22vh;
-    font-size: 5vw;
+    top: 15vh;
+    font-size: 7vw;
 }
 
 .container .text .services button {
@@ -172,7 +184,7 @@ header {
     font-family: "Merriweather";
     margin-top: 25px;
     color: #ca7b9b;
-    padding: 15px 40px;
+    padding: 30px;
     text-align: center;
     border-radius: 5px;
     font-size: 16px;

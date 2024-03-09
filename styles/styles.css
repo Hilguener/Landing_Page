@@ -1,0 +1,180 @@
+/* Header */
+@font-face {
+    font-family: "Merriweather";
+    src: url("/components/fonts/merriweather/merriweather-Black.ttf") format("woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather";
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+header {
+    background: #f0f0f0;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    padding: 0 100px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.title {
+    font-family: "Merriweather", Arial, sans-serif;
+    color: #ca7b9b;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li {
+    display: block;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #d584a5;
+    font-size: 19px;
+    padding: 10px 25px;
+
+    transition: 0.2s;
+    border-radius: 50px;
+    margin: 0 30px;
+}
+
+.nav-bar ul li a:hover {
+    color: #443f40;
+    background: #FFFFFF;
+}
+
+.nav-bar ul li a.active {
+    color: #C9A3B2;
+    background: #ffffff;
+}
+
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+
+    .container .text {
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #C9A3B2;
+        margin: 6px 0;
+    }
+
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #f0f0f0;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        height: 450px;
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+}
+
+.container img {
+    width: 100%;
+}
+
+.container .image {
+    animation: slideUp 1s ease-in-out;
+    filter: brightness(0.8)
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(-300px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.container .text {
+    position: absolute;
+    color: white;
+    left: 10vw;
+    top: 22vh;
+    font-size: 5vw;
+}
+
+.container .text .services button {
+    position: absolute;
+    background-color: #f0f0f0;
+    border: none;
+    font-family: "Merriweather";
+    margin-top: 25px;
+    color: #ca7b9b;
+    padding: 15px 40px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}

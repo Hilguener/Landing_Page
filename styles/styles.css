@@ -99,7 +99,7 @@ header {
     .nav-bar {
         height: 0;
         position: absolute;
-        top: 80px;
+        top: 70px;
         left: 0;
         right: 0;
         width: 100vw;
@@ -132,10 +132,12 @@ header {
     .container .text {
         font-size: 1px;
     }
+
     header {
         padding: 0 30px;
-        height: 50px;
+        height: 70px;
     }
+    
 }
 
 
@@ -218,7 +220,7 @@ header {
 }
 
 #bem-vindo .container h2 {
-    font-size: 3vw;
+    font-size: 4vw;
 }
 
 

@@ -156,7 +156,7 @@ header {
 
 .container .image {
     animation: slideUp 1s ease-in-out;
-    filter: brightness(0.8)
+    filter: brightness(0.5)
 }
 
 @keyframes slideUp {
@@ -169,11 +169,28 @@ header {
     }
 }
 
+#bem-vindo .container {
+    margin-top: 5vh;
+  }
+  
+  #bem-vindo h2 {
+    font-size: 2vw;
+    margin-right: 10vw;
+  }
+  
+  #bem-vindo aside {
+    width: 40vw;
+  }
+  
+  
+  
+  
+  
 .container .text {
     position: absolute;
     color: white;
     left: 10vw;
-    top: 13vh;
+    top: 16vh;
     font-size: 7vw;
 }
 

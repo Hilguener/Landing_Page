@@ -216,12 +216,12 @@ header {
 
 
 #bem-vindo .container aside p {
-    font-size: 16px;
+    font-size: 20px;
     text-align: justify;
 }
 
 #bem-vindo .container h2 {
-    font-size: 3vw;
+    font-size: 2rem;
 }
 
 

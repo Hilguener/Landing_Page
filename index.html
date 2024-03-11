@@ -19,9 +19,9 @@
         </div>
         <nav class="nav-bar">
             <ul>
-                <li><a href="" class="active">Inicio</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Sobre</a></li>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#bem-vindo">Sobre nós</a></li>
                 <li><a href="">Contato</a></li>
             </ul>
         </nav>
@@ -42,16 +42,13 @@
 
             <div class="container">
                 <h2>Bem-vindo ao Espaço <br>Adri Hubler</br></h2>
+
                 <aside>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, magnam aspernatur iure
-                        beatae at
-                        fuga, pariatur perspiciatis optio, veniam earum similique. Fugiat doloribus facilis officiis
-                        culpa,
-                        autem repellat quidem necessitatibus!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis vero neque quidem sequi eaque
-                        voluptatum, quam delectus similique repudiandae nostrum ut praesentium tempora iste recusandae
-                        totam harum nemo voluptatibus voluptate!
+                        O Espaço Adri Hubler é mais do que um salão de beleza. É um refúgio dedicado ao cuidado
+                        feminino, onde cada mulher é recebida com carinho e atenção individualizada. Aqui, você
+                        encontrará um ambiente acolhedor e relaxante, projetado para que você se sinta em casa enquanto
+                        desfruta de serviços de beleza de alta qualidade.
                     </p>
                 </aside>
 
@@ -113,16 +110,86 @@
         </section>
     </main>
     <script>
-        hamburger = document.querySelector(".hamburger");
-        hamburger.onclick = function () {
-            navBar = document.querySelector(".nav-bar");
-            navBar.classList.toggle("active");
-        }
-        image = document.querySelector(".image");
-        window.addEventListener("load"), () => {
-            image.classList.add("active");
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuAnchors = document.querySelectorAll('nav.mobile-nav > a');
+
+            mobileMenuAnchors.forEach(anchor => {
+                anchor.addEventListener('click', event => {
+                    const navBar = document.querySelector(".nav-bar");
+                    const targetId = anchor.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        event.preventDefault();
+
+                        // Calculate offset for centering the section
+                        const offset = targetElement.offsetTop - (window.innerHeight / 2);
+
+                        window.scrollTo({
+                            top: offset,
+                            behavior: 'smooth'
+                        });
+                        anchor.classList.add("active");
+                    }
+
+                    if (navBar.classList.contains("active")) {
+                        navBar.classList.remove("active");
+                    }
+                });
+            });
+
+            const hamburger = document.querySelector(".hamburger");
+            const navBar = document.querySelector(".nav-bar");
+
+            hamburger.addEventListener('click', function (e) {
+                e.stopPropagation();
+                navBar.classList.toggle("active");
+            });
+
+            const body = document.querySelector("body");
+
+            body.addEventListener('click', function (e) {
+                const navBar = document.querySelector(".nav-bar");
+                if (navBar.classList.contains("active")) {
+                    navBar.classList.remove("active");
+                }
+            });
+
+            window.addEventListener('scroll', function (e) {
+                const navLinks = document.querySelectorAll('.nav-bar a');
+
+                navLinks.forEach(link => {
+                    const targetId = link.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement && isElementInViewport(targetElement) && link.classList.contains("active")) {
+                        navBar.classList.remove("active");
+                        link.classList.remove("active");
+                    }
+                });
+            });
+
+            function isElementInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            if (window.innerWidth < 768) {
+                body.classList.add("mobile");
+            }
+        });
+
     </script>
+
+
+
+
+
 </body>
 
 </html>

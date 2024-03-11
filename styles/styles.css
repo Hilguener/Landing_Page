@@ -1,14 +1,13 @@
 /* Header */
 @font-face {
-    font-family: "Merriweather";
-    src: url("/components/fonts/merriweather/merriweather-Black.ttf") format("woff2");
-    src: url("/components/fonts/merriweather/Merriweather-Regular.ttf") format("woff2");
+    font-family: "Poppins";
+    src: url("/components/fonts/Poppins/Poppins-Light.ttf") format("woff2");
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Merriweather";
+    font-family: "Poppins";
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -27,7 +26,7 @@ header {
 }
 
 .title {
-    font-family: "Merriweather", Arial, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     color: #ca7b9b;
     font-size: 28px;
     font-weight: normal;
@@ -255,7 +254,7 @@ header {
 #bem-vindo .container aside p {
     font-size: 18px;
     line-height: 1.5;
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: justify;
 }
 
@@ -293,7 +292,7 @@ header {
     position: absolute;
     background-color: #f0f0f0;
     border: none;
-    font-family: "Merriweather";
+    font-family: "Poppins";
     margin-top: 10%;
     color: #ca7b9b;
     padding: 12px 15px;

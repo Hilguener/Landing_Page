@@ -2,6 +2,7 @@
 @font-face {
     font-family: "Merriweather";
     src: url("/components/fonts/merriweather/merriweather-Black.ttf") format("woff2");
+    src: url("/components/fonts/merriweather/Merriweather-Regular.ttf") format("woff2");
 }
 
 * {
@@ -215,12 +216,12 @@ header {
 
 
 #bem-vindo .container aside p {
-    font-size: 17px;
+    font-size: 16px;
     text-align: justify;
 }
 
 #bem-vindo .container h2 {
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 

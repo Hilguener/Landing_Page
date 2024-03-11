@@ -204,7 +204,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5%;  
+    padding: 5%;
 
 }
 
@@ -279,15 +279,15 @@ header {
 
 @keyframes slideRightLeft {
     from {
-      transform: translateX(100%);
-      opacity: 0;
+        transform: translateX(100%);
+        opacity: 0;
     }
 
     to {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
+}
 
 .container .text .services button {
     position: absolute;

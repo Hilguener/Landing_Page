@@ -248,8 +248,49 @@ header {
     }
 }
 
+#servicos ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* Define as colunas do grid */
+    gap: 20px;
+    /* Espaço entre as imagens */
+    list-style: none;
+    /* Remove os estilos padrão da lista */
+    padding: 0;
+    /* Remove o preenchimento padrão da lista */
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#servicos ul li {
+    text-align: center;
+    /* Centraliza o conteúdo das células do grid */
+}
+
+#servicos ul li img {
+    max-width: 100%;
+    /* Garante que as imagens não ultrapassem o tamanho da célula do grid */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    filter: brightness(0.5);
+}
 
 
+
+#servicos {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicos h2 {
+    margin-top: auto;
+    border-bottom: 1px solid #9c9c9c;
+    border-width: 50%;
+}
 
 #bem-vindo .container aside p {
     font-size: 18px;

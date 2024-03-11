@@ -75,6 +75,7 @@ header {
     .container .text {
         font-size: 1.5vw;
     }
+
 }
 
 @media only screen and (max-width: 1100px) {
@@ -82,6 +83,7 @@ header {
         padding: 0 30px;
         height: 70px;
     }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -138,7 +140,8 @@ header {
         padding: 0 30px;
         height: 70px;
     }
-    
+
+
 }
 
 
@@ -171,12 +174,58 @@ header {
 @keyframes slideUp {
     from {
         transform: translateY(-300px);
+        opacity: 0;
     }
 
     to {
         transform: translateY(0);
+        opacity: 1;
     }
 }
+
+
+
+@media only screen and (min-width: 769px) {
+    #bem-vindo .container aside {
+        flex: 1;
+        margin-right: 15%;
+    }
+
+    #bem-vindo .container h2 {
+        margin-left: 15%;
+        margin-right: 15%;
+
+    }
+
+
+}
+
+#bem-vindo .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;  
+    
+}
+
+#bem-vindo img {
+    /* Estilos básicos da imagem */
+    width: 66%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 10px;
+    display: block;
+
+
+}
+
+.slide-animation {
+    animation: slideRightLeft 1s ease-in-out;
+}
+
+
 
 @media only screen and (max-width: 768px) {
     #bem-vindo .container {
@@ -187,48 +236,33 @@ header {
 
     #bem-vindo .container aside {
         margin-left: 0;
-        margin-top: 20px;
     }
 
     #bem-vindo .container h2 {
         text-align: center;
+        margin-top: 20%;
+    }
+
+    #bem-vindo img {
+        width: 100%;
     }
 }
 
-@media only screen and (min-width: 769px) {
-    #bem-vindo .container aside {
-        flex: 1;
-        margin-left: 20%;
-    }
-}
 
-
-
-
-#bem-vindo .container {
-    margin-top: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
-}
-
-#bem-vindo img {
-    width: 50%; /* Define a largura da imagem */
-    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho da seção */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    display: block; /* Garante que a margem funcione corretamente */
-}
 
 
 #bem-vindo .container aside p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
+    margin-top: 10%;
     text-align: justify;
 }
 
 #bem-vindo .container h2 {
     font-size: 2rem;
+    border-bottom: 1px solid #9c9c9c;
+    border-width: 50%;
+
 }
 
 
@@ -237,9 +271,22 @@ header {
     position: absolute;
     color: white;
     left: 10%;
-    top: 40%;       
-    font-size: 5rem;
+    top: 30%;
+    font-size: 4rem;
+    animation: slideRightLeft 1.5s ease-in-out;
 }
+
+@keyframes slideRightLeft {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
 .container .text .services button {
     position: absolute;

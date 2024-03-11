@@ -19,9 +19,9 @@
         </div>
         <nav class="nav-bar">
             <ul>
-                <li><a href="" class="active">Inicio</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Sobre</a></li>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#bem-vindo">Sobre nós</a></li>
                 <li><a href="">Contato</a></li>
             </ul>
         </nav>
@@ -42,16 +42,13 @@
 
             <div class="container">
                 <h2>Bem-vindo ao Espaço <br>Adri Hubler</br></h2>
+
                 <aside>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, magnam aspernatur iure
-                        beatae at
-                        fuga, pariatur perspiciatis optio, veniam earum similique. Fugiat doloribus facilis officiis
-                        culpa,
-                        autem repellat quidem necessitatibus!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis vero neque quidem sequi eaque
-                        voluptatum, quam delectus similique repudiandae nostrum ut praesentium tempora iste recusandae
-                        totam harum nemo voluptatibus voluptate!
+                        O Espaço Adri Hubler é mais do que um salão de beleza. É um refúgio dedicado ao cuidado
+                        feminino, onde cada mulher é recebida com carinho e atenção individualizada. Aqui, você
+                        encontrará um ambiente acolhedor e relaxante, projetado para que você se sinta em casa enquanto
+                        desfruta de serviços de beleza de alta qualidade.
                     </p>
                 </aside>
 
@@ -113,16 +110,82 @@
         </section>
     </main>
     <script>
-        hamburger = document.querySelector(".hamburger");
-        hamburger.onclick = function () {
-            navBar = document.querySelector(".nav-bar");
-            navBar.classList.toggle("active");
-        }
-        image = document.querySelector(".image");
-        window.addEventListener("load"), () => {
-            image.classList.add("active");
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuAnchors = document.querySelectorAll('nav.mobile-nav > a');
+            const navBar = document.querySelector(".nav-bar");
+
+            mobileMenuAnchors.forEach(anchor => {
+                anchor.addEventListener('click', event => {
+                    const targetId = anchor.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        event.preventDefault();
+
+                        // Calculate offset for centering the section
+                        const offset = targetElement.offsetTop - (window.innerHeight / 2);
+
+                        window.scrollTo({
+                            top: offset,
+                            behavior: 'smooth'
+                        });
+                        anchor.classList.add("active");
+                    }
+
+                    if (navBar.classList.contains("active")) {
+                        navBar.classList.remove("active");
+                    }
+                });
+            });
+
+            const hamburger = document.querySelector(".hamburger");
+
+            hamburger.addEventListener('click', function (e) {
+                e.stopPropagation();
+                navBar.classList.toggle("active");
+            });
+
+            const body = document.querySelector("body");
+
+            body.addEventListener('click', function (e) {
+                if (navBar.classList.contains("active")) {
+                    navBar.classList.remove("active");
+                }
+            });
+
+            if (window.innerWidth < 768) {
+                body.classList.add("mobile");
+            }
+
+            // Intersection Observer only for the #bem-vindo section
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (!entry.target.classList.contains('slide-animation')) {
+                            entry.target.classList.add('slide-animation');
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.5 // Adjust this threshold as needed
+            });
+
+            // Observe the #bem-vindo section
+            const bemVindoSection = document.getElementById('bem-vindo');
+            if (bemVindoSection) {
+                observer.observe(bemVindoSection);
+            }
+        });
     </script>
+
+
+
+
+
+
+
+
 </body>
 
 </html>

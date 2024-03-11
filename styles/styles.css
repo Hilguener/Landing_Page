@@ -205,7 +205,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 5%;  
-    
+
 }
 
 #bem-vindo img {
@@ -224,6 +224,7 @@ header {
 .slide-animation {
     animation: slideRightLeft 1s ease-in-out;
 }
+
 
 
 

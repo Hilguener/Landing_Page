@@ -14,7 +14,7 @@
 }
 
 header {
-    background: #f0f0f0;
+    background: #faecec;
     height: 80px;
     width: 100%;
     position: fixed;
@@ -27,7 +27,7 @@ header {
 
 .title {
     font-family: "Poppins", Arial, sans-serif;
-    color: #ca7b9b;
+    color: #e24b88;
     font-size: 28px;
     font-weight: normal;
 }
@@ -46,7 +46,7 @@ header {
 
 .nav-bar ul li a {
     display: block;
-    color: #d584a5;
+    color: #e24b88;
     font-size: 19px;
     padding: 10px 25px;
 
@@ -105,7 +105,7 @@ header {
         left: 0;
         right: 0;
         width: 100vw;
-        background: #f0f0f0;
+        background: #faecec;
         transition: 0.5s;
         overflow: hidden;
     }
@@ -206,6 +206,7 @@ header {
     margin-top: 20px;
     border-radius: 5px;
     display: block;
+    filter: brightness(1);
 }
 
 .slide-animation {
@@ -244,7 +245,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
-    gap: 5px;
+    gap: 15px;
    
     list-style: none;
     
@@ -258,7 +259,7 @@ header {
 #servicos ul li {
     position: relative;
     text-align: center;
-    font-size: 18px;
+    transition: transform 0.3s ease-in-out;
     font-weight: bold;
 }
 
@@ -268,8 +269,9 @@ header {
     /* Garante que as imagens não ultrapassem o tamanho da célula do grid */
     height: auto;
     display: block;
+    border-radius: 5px;
     /* Mantém a proporção da imagem */
-    filter: brightness(0.5);
+    filter: brightness(0.4);
 }
 
 
@@ -302,10 +304,15 @@ header {
     transform: translate(-50%, -50%);
     color: #fff;
     padding: 10px;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     opacity: 1; /* Oculta inicialmente o texto */
     transition: opacity 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+#servicos li:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do item ao passar o mouse sobre ele */
+    filter: brightness(1.5);
 }
 
 
@@ -359,7 +366,8 @@ header {
 
 .container .text .services button {
     position: absolute;
-    background-color: #f0f0f0;
+    background-color: #faecec;
+
     border: none;
     font-family: "Poppins";
     margin-top: 10%;
@@ -370,4 +378,12 @@ header {
     font-size: 1.5rem;
     font-style: bold;
     cursor: pointer;
+}
+.container .text .services button a {
+    color: #e24b88;
+}
+
+.container .text .services button:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do item ao passar o mouse sobre ele */
+    transition: opacity 0.3s ease-in-out;
 }

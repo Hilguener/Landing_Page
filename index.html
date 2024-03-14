@@ -31,7 +31,7 @@
     <div class="container">
         <img class="image" src="components/images/header_image.webp" alt="null">
         <div class="text">Espaço Adri<br>Hubler
-            <div class="services"> <button> <a href="#servicos">Nossos Serviços</a></button></div>
+            <div class="services"> <button> <a href="#servicos">NOSSOS SERVIÇOS</a></button></div>
 
         </div>
     </div>
@@ -50,7 +50,7 @@
                     </p>
                 </div>
 
-                <img src="components/images/salao.webp" alt="null">
+                <img class="welcomeImage" src="components/images/salao.webp" alt="null">
             </div>
         </section>
 
@@ -120,7 +120,7 @@
                             <p class="name">Jana</p>
                             <p class="info">Lipo enzimática, e Preenchimento de Glúteo</p>
                         </li>
-                    
+
                     </ul>
                 </div>
             </div>
@@ -218,6 +218,7 @@
 
             // Observe the #bem-vindo section
             const bemVindoSection = document.getElementById('bem-vindo');
+            const servicesSection = document.getElementById('servicos');
             if (bemVindoSection) {
                 observer.observe(bemVindoSection);
             }

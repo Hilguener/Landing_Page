@@ -1,8 +1,4 @@
-/* Header */
-@font-face {
-    font-family: "Poppins";
-    src: url("/components/fonts/Poppins/Poppins-Light.ttf") format("woff2");
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -143,9 +139,6 @@ header {
 
 }
 
-
-
-
 .container {
     width: 100%;
     height: auto;
@@ -157,14 +150,14 @@ header {
 
 }
 
-.container img {
+.container .image {
     height: 100vh;
     min-height: 300px;
-    background: no-repeat center center scroll;
     object-fit: cover;
+    background-color: #b198a2;
     background-position: center;
     animation: slideUp 1s ease-in-out;
-    filter: brightness(0.5);
+    opacity: 0.8;
     width: 100%;
 }
 
@@ -193,12 +186,14 @@ header {
 
 #bem-vindo .container .textSpace {
     text-align: justify;
+}
 
+#bem-vindo .container .textSpace p {
+    margin-top: 15px;
 }
 
 
-#bem-vindo .container img {
-
+#bem-vindo .container .welcomeImage {
     width: 40%;
     max-width: 100%;
     height: auto;
@@ -206,11 +201,11 @@ header {
     margin-top: 20px;
     border-radius: 5px;
     display: block;
-    filter: brightness(1);
+
 }
 
 .slide-animation {
-    animation: slideRightLeft 1s ease-in-out;
+    animation: slideRightLeft 1.5s ease-in-out;
 }
 
 #bem-vindo .container .textSpace {
@@ -240,9 +235,7 @@ header {
 }
 
 #servicos ul li img {
-
     max-width: 100%;
-
     height: auto;
     display: block;
     border-radius: 5px;
@@ -281,7 +274,6 @@ header {
 #equipe ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Cria 4 colunas */
     gap: 15px;
     list-style: none;
     padding: 0;
@@ -302,9 +294,7 @@ header {
     overflow: hidden;
 }
 
-#equipe ul li:nth-child(n+5) {
-    margin-top: 15px;
-}
+
 
 #equipe ul li img {
     width: 100%;
@@ -405,22 +395,22 @@ header {
 
 .container .text .services button {
     position: absolute;
-    background-color: #faecec;
+    background-color: #f8f8f8;
 
     border: none;
     font-family: "Poppins";
     margin-top: 10%;
-    color: #ca7b9b;
-    padding: 12px 15px;
+    color: #ffffff;
+    padding: 12px 25px;
     text-align: center;
-    border-radius: 5px;
-    font-size: 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
     font-style: bold;
     cursor: pointer;
 }
 
 .container .text .services button a {
-    color: #e24b88;
+    color: #000000;
 }
 
 .container .text .services button:hover {
@@ -448,7 +438,7 @@ header {
 
     #equipe ul {
         grid-template-columns: repeat(2, 1fr);
-       
+
     }
 
     #equipe ul li:nth-child(n+3) {

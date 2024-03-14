@@ -149,17 +149,19 @@ header {
     z-index: 1;
 
 }
-
 .container .image {
+    position: relative;
     height: 100vh;
     min-height: 300px;
     object-fit: cover;
-    background-color: #b198a2;
     background-position: center;
+    filter: brightness(0.8);
     animation: slideUp 1s ease-in-out;
-    opacity: 0.8;
     width: 100%;
 }
+
+
+
 
 
 
@@ -175,12 +177,10 @@ header {
     }
 }
 
-
 #bem-vindo .container {
     display: flex;
     padding: 30px;
     align-items: center;
-    /* Centraliza verticalmente */
 }
 
 
@@ -201,7 +201,6 @@ header {
     margin-top: 20px;
     border-radius: 5px;
     display: block;
-
 }
 
 .slide-animation {
@@ -215,13 +214,9 @@ header {
 #servicos ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-
     gap: 15px;
-
     list-style: none;
-
     padding: 0;
-
     margin-top: 25px;
     margin-left: 15px;
     margin-right: 15px;
@@ -298,11 +293,8 @@ header {
 
 #equipe ul li img {
     width: 100%;
-    /* Ajusta a largura da imagem para ocupar todo o espaço do card */
     height: 190px;
-    /* Altura automática */
     border-radius: 10px 10px 0 0;
-    /* Borda arredondada apenas na parte superior */
     object-fit: cover;
 }
 
@@ -357,7 +349,6 @@ header {
 
 #bem-vindo .container h2 {
     font-size: 2rem;
-
     position: relative;
 
 }
@@ -396,7 +387,6 @@ header {
 .container .text .services button {
     position: absolute;
     background-color: #f8f8f8;
-
     border: none;
     font-family: "Poppins";
     margin-top: 10%;

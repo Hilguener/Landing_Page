@@ -266,11 +266,10 @@ header {
 #servicos ul li img {
     
     max-width: 100%;
-    /* Garante que as imagens não ultrapassem o tamanho da célula do grid */
+
     height: auto;
     display: block;
     border-radius: 5px;
-    /* Mantém a proporção da imagem */
     filter: brightness(0.4);
 }
 
@@ -289,12 +288,12 @@ header {
 }
 
 #servicos h2::after {
-    content: ""; /* Adiciona um pseudo-elemento para criar a borda */
+    content: "";
     position: absolute;
-    bottom: 0; /* Posiciona a borda na parte inferior */
-    left: 0; /* Alinha a borda à esquerda */
-    width: 100%; /* Define a largura da borda como metade da largura do h2 */
-    border-bottom: 1px solid #9c9c9c; /* Define o estilo da borda */
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
+    border-bottom: 1px solid #9c9c9c; 
 }
 
 .overlay {
@@ -306,12 +305,12 @@ header {
     padding: 10px;
     font-size: 16px;
     text-align: center;
-    opacity: 1; /* Oculta inicialmente o texto */
-    transition: opacity 0.3s ease-in-out; /* Adiciona uma transição suave */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out; 
 }
 
 #servicos li:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do item ao passar o mouse sobre ele */
+    transform: scale(1.05); 
     filter: brightness(1.5);
 }
 
@@ -320,7 +319,6 @@ header {
     #bem-vindo .container .textSpace {
         margin-right: 100px;
         padding: 70px;
-       
     }
 }
 
@@ -333,12 +331,12 @@ header {
 }
 
 #bem-vindo .container h2::after {
-    content: ""; /* Adiciona um pseudo-elemento para criar a borda */
+    content: ""; 
     position: absolute;
-    bottom: 0; /* Posiciona a borda na parte inferior */
-    left: 0; /* Alinha a borda à esquerda */
-    width: 100%; /* Define a largura da borda como metade da largura do h2 */
-    border-bottom: 1px solid #9c9c9c; /* Define o estilo da borda */
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    border-bottom: 1px solid #9c9c9c; 
 }
 
 
@@ -384,6 +382,6 @@ header {
 }
 
 .container .text .services button:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do item ao passar o mouse sobre ele */
+    transform: scale(1.05); 
     transition: opacity 0.3s ease-in-out;
 }

@@ -293,14 +293,8 @@ header {
 
 #equipe ul li img {
     width: 100%;
-<<<<<<< HEAD
-    height: 190px;
-    border-radius: 10px 10px 0 0;
-=======
-    
     height: 190px;
     border-radius: 10px 10px 0 0; 
->>>>>>> c464cba (Deleted css coments)
     object-fit: cover;
 }
 

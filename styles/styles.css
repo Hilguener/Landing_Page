@@ -187,7 +187,6 @@ header {
     display: flex;
     padding: 30px;
     align-items: center;
-    /* Centraliza verticalmente */
 }
 
 
@@ -281,7 +280,6 @@ header {
 #equipe ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Cria 4 colunas */
     gap: 15px;
     list-style: none;
     padding: 0;
@@ -308,11 +306,9 @@ header {
 
 #equipe ul li img {
     width: 100%;
-    /* Ajusta a largura da imagem para ocupar todo o espaço do card */
+    
     height: 190px;
-    /* Altura automática */
-    border-radius: 10px 10px 0 0;
-    /* Borda arredondada apenas na parte superior */
+    border-radius: 10px 10px 0 0; 
     object-fit: cover;
 }
 

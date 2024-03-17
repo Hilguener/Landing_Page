@@ -149,6 +149,7 @@ header {
     z-index: 1;
 
 }
+
 .container .image {
     position: relative;
     height: 100vh;
@@ -224,10 +225,26 @@ header {
 
 #servicos ul li {
     position: relative;
+
+    transition: opacity 0.5s ease;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
     font-weight: bold;
 }
+
+
+#servicos ul li .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 1; /* Define a opacidade inicial */
+}
+
+
 
 #servicos ul li img {
     max-width: 100%;
@@ -252,10 +269,11 @@ header {
 #servicos h2::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid #9c9c9c;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    border-bottom: 1px solid #ccc;
 }
 
 #equipe {
@@ -287,14 +305,14 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    
 }
-
 
 
 #equipe ul li img {
     width: 100%;
     height: 190px;
-    border-radius: 10px 10px 0 0; 
+    border-radius: 10px 10px 0 0;
     object-fit: cover;
 }
 
@@ -309,23 +327,25 @@ header {
     color: #4a4a4a;
 }
 
-#equipe h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid #9c9c9c;
-}
-
 #equipe h2 {
     position: relative;
     padding-bottom: 10px;
 }
 
+#equipe h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    border-bottom: 1px solid #ccc;
+}
+
 #equipe li:hover {
     transform: scale(1.05);
 }
+
 
 .overlay {
     position: absolute;
@@ -434,4 +454,140 @@ header {
     #equipe ul li:nth-child(n+3) {
         margin-top: 0;
     }
+}
+
+#depoimentos h2 {
+    margin-top: 35px;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Para o pseudo-elemento ser posicionado em relação a este elemento */
+}
+
+#depoimentos h2::after {
+    content: ""; /* Adiciona conteúdo ao pseudo-elemento */
+    position: absolute; /* Posiciona o pseudo-elemento */
+    bottom: -10px; /* Posiciona o pseudo-elemento abaixo do título */
+    left: 50%; /* Alinha o pseudo-elemento à metade do container */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    width: 50px; /* Define a largura da linha */
+    height: 1px; /* Define a altura da linha */
+    background-color: #9c9c9c; /* Cor da linha */
+}
+
+
+
+#depoimentos ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+#depoimentos ul li {
+    margin: 0 10px;
+    gap: 50px;
+}
+
+.testimonial {
+    text-align: center;
+    max-width: 300px;
+    border: 1px solid #ccc; /* Adiciona uma borda */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    padding: 15px; /* Adiciona um preenchimento interno */
+    margin: 0 20px; /* Adiciona margens */
+}
+
+.testimonial img {
+    width: 80px; /* Define o tamanho das imagens */
+    height: 80px;
+    border-radius: 50%; /* Torna as imagens circulares */
+    margin-bottom: 10px;
+}
+
+
+.testimonial p {
+    font-style: italic;
+    color: #666;
+}
+
+.testimonial .name {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    #depoimentos h2 {
+        margin-top: 20px;
+        font-size: 20px; /* Reduz o tamanho do texto */
+        margin-bottom: 15px;
+    }
+
+    #depoimentos ul {
+        flex-direction: column; /* Altera a direção do flexbox para coluna */
+        align-items: center; /* Centraliza os depoimentos na vertical */
+    }
+
+    #depoimentos ul li {
+        margin: 10px 0; /* Ajusta o espaçamento entre os depoimentos */
+    }
+
+    .testimonial img {
+        width: 80px; /* Reduz o tamanho das imagens */
+        height: 80px;
+        margin-bottom: 5px;
+    }
+
+    .testimonial p {
+        font-size: 14px; /* Reduz o tamanho do texto dos depoimentos */
+    }
+}
+
+
+
+footer {
+    background-color: #faecec;
+    color:#e24b88;
+    padding: 50px 0;
+}
+
+#contato {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#contato h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#contato p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#contato ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contato ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#contato ul li:last-child {
+    margin-bottom: 0;
+}
+
+#contato ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contato ul li a:hover {
+    color: #e24b88; /* Cor de destaque ao passar o mouse */
 }

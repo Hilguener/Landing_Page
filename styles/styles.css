@@ -162,10 +162,6 @@ header {
 }
 
 
-
-
-
-
 @keyframes slideUp {
     from {
         transform: translateY(-300px);
@@ -178,39 +174,7 @@ header {
     }
 }
 
-#about-us .container {
-    display: flex;
-    padding: 30px;
-    align-items: center;
-}
 
-
-#about-us .container .textSpace {
-    text-align: justify;
-}
-
-#about-us .container .textSpace p {
-    margin-top: 15px;
-}
-
-
-#about-us .container .welcomeImage {
-    width: 40%;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 20px;
-    border-radius: 5px;
-    display: block;
-}
-
-.slide-animation {
-    animation: slideRightLeft 1.5s ease-in-out;
-}
-
-#about-us .container .textSpace {
-    flex: 1;
-}
 
 #services ul {
     display: grid;
@@ -241,7 +205,7 @@ header {
     padding: 10px;
     font-size: 16px;
     text-align: center;
-    opacity: 1; /* Define a opacidade inicial */
+    opacity: 1;
 }
 
 
@@ -305,13 +269,12 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    
-}
 
+}
 
 #equipe ul li img {
     width: 100%;
-    height: 190px;
+    height: 155px;
     border-radius: 10px 10px 0 0;
     object-fit: cover;
 }
@@ -323,7 +286,8 @@ header {
 
 #equipe ul li .info {
     padding: 0 14px 14px;
-    font-size: 16px;
+    font-size: 12px;
+    font-style: italic;
     color: #4a4a4a;
 }
 
@@ -346,6 +310,10 @@ header {
     transform: scale(1.05);
 }
 
+#equipe li a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .overlay {
     position: absolute;
@@ -380,6 +348,62 @@ header {
     left: 0;
     width: 100%;
     border-bottom: 1px solid #9c9c9c;
+}
+
+
+
+#about-us .container {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+}
+
+
+#about-us .container .textSpace {
+    text-align: justify;
+}
+
+#about-us .container .textSpace p {
+    margin-top: 15px;
+}
+
+
+#about-us .container .welcomeImage {
+    width: 40%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: block;
+}
+
+.slide-animation {
+    animation: slideRightLeft 1.5s ease-in-out;
+}
+
+#about-us .container .textSpace {
+    flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    #about-us .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    #about-us .container .textSpace h2 {
+        text-align: center;
+        margin-top: 20%;
+        text-align: center;
+    }
+
+    #about-us .container .welcomeImage {
+        width: 100%;
+    }
+
 }
 
 
@@ -429,22 +453,6 @@ header {
 }
 
 @media only screen and (max-width: 768px) {
-    #about-us .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-
-    #about-us .container .textSpace h2 {
-        text-align: center;
-        margin-top: 20%;
-        text-align: center;
-    }
-
-    #about-us .container img {
-        width: 100%;
-    }
 
     #equipe ul {
         grid-template-columns: repeat(2, 1fr);
@@ -461,19 +469,29 @@ header {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
-    text-align: center; /* Centraliza o texto */
-    position: relative; /* Para o pseudo-elemento ser posicionado em relação a este elemento */
+    text-align: center;
+    /* Centraliza o texto */
+    position: relative;
+    /* Para o pseudo-elemento ser posicionado em relação a este elemento */
 }
 
 #depoimentos h2::after {
-    content: ""; /* Adiciona conteúdo ao pseudo-elemento */
-    position: absolute; /* Posiciona o pseudo-elemento */
-    bottom: -10px; /* Posiciona o pseudo-elemento abaixo do título */
-    left: 50%; /* Alinha o pseudo-elemento à metade do container */
-    transform: translateX(-50%); /* Centraliza horizontalmente */
-    width: 50px; /* Define a largura da linha */
-    height: 1px; /* Define a altura da linha */
-    background-color: #9c9c9c; /* Cor da linha */
+    content: "";
+    /* Adiciona conteúdo ao pseudo-elemento */
+    position: absolute;
+    /* Posiciona o pseudo-elemento */
+    bottom: -10px;
+    /* Posiciona o pseudo-elemento abaixo do título */
+    left: 50%;
+    /* Alinha o pseudo-elemento à metade do container */
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    width: 50px;
+    /* Define a largura da linha */
+    height: 1px;
+    /* Define a altura da linha */
+    background-color: #9c9c9c;
+    /* Cor da linha */
 }
 
 
@@ -494,16 +512,22 @@ header {
 .testimonial {
     text-align: center;
     max-width: 300px;
-    border: 1px solid #ccc; /* Adiciona uma borda */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    padding: 15px; /* Adiciona um preenchimento interno */
-    margin: 0 20px; /* Adiciona margens */
+    border: 1px solid #ccc;
+    /* Adiciona uma borda */
+    border-radius: 10px;
+    /* Adiciona bordas arredondadas */
+    padding: 15px;
+    /* Adiciona um preenchimento interno */
+    margin: 0 20px;
+    /* Adiciona margens */
 }
 
 .testimonial img {
-    width: 80px; /* Define o tamanho das imagens */
+    width: 80px;
+    /* Define o tamanho das imagens */
     height: 80px;
-    border-radius: 50%; /* Torna as imagens circulares */
+    border-radius: 50%;
+    /* Torna as imagens circulares */
     margin-bottom: 10px;
 }
 
@@ -520,27 +544,33 @@ header {
 @media only screen and (max-width: 768px) {
     #depoimentos h2 {
         margin-top: 20px;
-        font-size: 20px; /* Reduz o tamanho do texto */
+        font-size: 20px;
+        /* Reduz o tamanho do texto */
         margin-bottom: 15px;
     }
 
     #depoimentos ul {
-        flex-direction: column; /* Altera a direção do flexbox para coluna */
-        align-items: center; /* Centraliza os depoimentos na vertical */
+        flex-direction: column;
+        /* Altera a direção do flexbox para coluna */
+        align-items: center;
+        /* Centraliza os depoimentos na vertical */
     }
 
     #depoimentos ul li {
-        margin: 10px 0; /* Ajusta o espaçamento entre os depoimentos */
+        margin: 10px 0;
+        /* Ajusta o espaçamento entre os depoimentos */
     }
 
     .testimonial img {
-        width: 80px; /* Reduz o tamanho das imagens */
+        width: 80px;
+        /* Reduz o tamanho das imagens */
         height: 80px;
         margin-bottom: 5px;
     }
 
     .testimonial p {
-        font-size: 14px; /* Reduz o tamanho do texto dos depoimentos */
+        font-size: 14px;
+        /* Reduz o tamanho do texto dos depoimentos */
     }
 }
 
@@ -548,7 +578,7 @@ header {
 
 footer {
     background-color: #faecec;
-    color:#e24b88;
+    color: #e24b88;
     padding: 50px 0;
 }
 
@@ -574,7 +604,7 @@ footer {
 }
 
 #contact ul li {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
@@ -583,11 +613,7 @@ footer {
 }
 
 #contact ul li a {
-    color: #fff;
+    color: #e24b88;
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-#contact ul li a:hover {
-    color: #e24b88; 
 }

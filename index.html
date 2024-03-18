@@ -20,9 +20,9 @@
         <nav class="nav-bar">
             <ul>
                 <li><a href="#" class="active">Inicio</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#bem-vindo">Sobre nós</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#about-us">Sobre nós</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
 
@@ -32,14 +32,14 @@
         <img class="image" src="components/images/header_image.jpeg" alt="null">
         <div class="overlay"></div>
         <div class="text">Espaço Adri<br>Hubler
-            <div class="services"> <button> <a href="#servicos">NOSSOS SERVIÇOS</a></button></div>
+            <div class="services"> <button> <a href="#services">NOSSOS SERVIÇOS</a></button></div>
 
         </div>
     </div>
 
     <main>
 
-        <section id="bem-vindo">
+        <section id="about-us">
             <div class="container">
                 <div class="textSpace">
                     <h2>Bem-vindo ao Espaço Adri Hubler</h2>
@@ -55,7 +55,7 @@
             </div>
         </section>
 
-        <section id="servicos">
+        <section id="services">
             <h2>Nossos Serviços</h2>
             <ul>
                 <li>
@@ -76,7 +76,7 @@
                 </li>
                 <li>
                     <img src="components/images/botox.jpg" alt="">
-                    <div class="overlay">Procedimentos estéticos</div> <!-- Texto sobreposto -->
+                    <div class="overlay">Tratamentos estéticos</div> <!-- Texto sobreposto -->
                 </li>
             </ul>
         </section>
@@ -162,7 +162,7 @@
 
     </main>
     <footer>
-        <section id="contato">
+        <section id="contact">
             <h2>Contato</h2>
             <p>
                 Entre em contato conosco para agendar uma consulta ou saber mais sobre nossos serviços.
@@ -179,11 +179,11 @@
         document.addEventListener("DOMContentLoaded", function () {
             const mobileMenuAnchors = document.querySelectorAll('.nav-bar a');
             const navBar = document.querySelector(".nav-bar");
-            const servicosSection = document.getElementById("servicos");
-            const bemVindoSection = document.getElementById("bem-vindo");
-            const contatoSection = document.getElementById("contato");
+            const servicosSection = document.getElementById("services");
+            const bemVindoSection = document.getElementById("about-us");
+            const contatoSection = document.getElementById("contact");
             const body = document.querySelector("body");
-            const servicosListItems = document.querySelectorAll('#servicos ul li');
+            const servicosListItems = document.querySelectorAll('#services ul li');
 
             mobileMenuAnchors.forEach(anchor => {
                 anchor.addEventListener('click', scrollToSection);
@@ -191,9 +191,9 @@
 
             // Atualiza o item do menu de navegação ativo durante a rolagem
             window.addEventListener('scroll', function () {
-                if (isElementInViewport(servicosSection)) {
+                if (isElementInViewport(bemVindoSection)) {
                     setActiveMenuLink(1);
-                } else if (isElementInViewport(bemVindoSection)) {
+                } else if (isElementInViewport(servicosSection)) {
                     setActiveMenuLink(2);
                 } else if (isElementInViewport(contatoSection)) {
                     setActiveMenuLink(3);

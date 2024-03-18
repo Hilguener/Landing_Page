@@ -178,23 +178,23 @@ header {
     }
 }
 
-#bem-vindo .container {
+#about-us .container {
     display: flex;
     padding: 30px;
     align-items: center;
 }
 
 
-#bem-vindo .container .textSpace {
+#about-us .container .textSpace {
     text-align: justify;
 }
 
-#bem-vindo .container .textSpace p {
+#about-us .container .textSpace p {
     margin-top: 15px;
 }
 
 
-#bem-vindo .container .welcomeImage {
+#about-us .container .welcomeImage {
     width: 40%;
     max-width: 100%;
     height: auto;
@@ -208,11 +208,11 @@ header {
     animation: slideRightLeft 1.5s ease-in-out;
 }
 
-#bem-vindo .container .textSpace {
+#about-us .container .textSpace {
     flex: 1;
 }
 
-#servicos ul {
+#services ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 15px;
@@ -223,7 +223,7 @@ header {
     margin-right: 15px;
 }
 
-#servicos ul li {
+#services ul li {
     position: relative;
 
     transition: opacity 0.5s ease;
@@ -232,7 +232,7 @@ header {
 }
 
 
-#servicos ul li .overlay {
+#services ul li .overlay {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -246,7 +246,7 @@ header {
 
 
 
-#servicos ul li img {
+#services ul li img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -254,19 +254,19 @@ header {
     filter: brightness(0.4);
 }
 
-#servicos {
+#services {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#servicos h2 {
+#services h2 {
     position: relative;
     padding-bottom: 10px;
 }
 
-#servicos h2::after {
+#services h2::after {
     content: "";
     position: absolute;
     bottom: -5px;
@@ -361,19 +361,19 @@ header {
 }
 
 @media (min-width: 768px) {
-    #bem-vindo .container .textSpace {
+    #about-us .container .textSpace {
         margin-right: 100px;
         padding: 70px;
     }
 }
 
-#bem-vindo .container h2 {
+#about-us .container h2 {
     font-size: 2rem;
     position: relative;
 
 }
 
-#bem-vindo .container h2::after {
+#about-us .container h2::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -429,20 +429,20 @@ header {
 }
 
 @media only screen and (max-width: 768px) {
-    #bem-vindo .container {
+    #about-us .container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
 
-    #bem-vindo .container .textSpace h2 {
+    #about-us .container .textSpace h2 {
         text-align: center;
         margin-top: 20%;
         text-align: center;
     }
 
-    #bem-vindo .container img {
+    #about-us .container img {
         width: 100%;
     }
 
@@ -552,42 +552,42 @@ footer {
     padding: 50px 0;
 }
 
-#contato {
+#contact {
     text-align: center;
     margin: 0 auto;
     max-width: 800px;
 }
 
-#contato h2 {
+#contact h2 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-#contato p {
+#contact p {
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-#contato ul {
+#contact ul {
     list-style-type: none;
     padding: 0;
 }
 
-#contato ul li {
+#contact ul li {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-#contato ul li:last-child {
+#contact ul li:last-child {
     margin-bottom: 0;
 }
 
-#contato ul li a {
+#contact ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-#contato ul li a:hover {
+#contact ul li a:hover {
     color: #e24b88; /* Cor de destaque ao passar o mouse */
 }

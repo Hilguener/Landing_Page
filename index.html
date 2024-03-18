@@ -177,14 +177,14 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const mobileMenuAnchors = document.querySelectorAll('.nav-bar a');
+            const mobileMenuButton = document.querySelector('.hamburger');
             const navBar = document.querySelector(".nav-bar");
+            const mobileMenuAnchors = document.querySelectorAll('.nav-bar a');
             const servicosSection = document.getElementById("services");
             const bemVindoSection = document.getElementById("about-us");
             const contatoSection = document.getElementById("contact");
-            const body = document.querySelector("body");
-            const servicosListItems = document.querySelectorAll('#services ul li');
 
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
             mobileMenuAnchors.forEach(anchor => {
                 anchor.addEventListener('click', scrollToSection);
             });
